@@ -15,6 +15,7 @@ export default class TodoApp extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    paddingTop: 40
   }
 });

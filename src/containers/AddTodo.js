@@ -1,5 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity
+} from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 
 export default class AddTodo extends React.Component {
@@ -18,8 +24,19 @@ export default class AddTodo extends React.Component {
           }}
         />
         <TouchableOpacity onPress={() => alert("added too")}>
-          <View style={{ height: 50, backgroundColor: "eaeaea" }}>
-            <Ionicons name="md-add" size={30} />
+          <View
+            style={{
+              height: 50,
+              backgroundColor: "eaeaea",
+              alignItems: "center",
+              justifyContent: "center"
+            }}
+          >
+            <Ionicons
+              name="md-add"
+              size={30}
+              style={{ color: "#de9595", padding: 10 }}
+            />
           </View>
         </TouchableOpacity>
       </View>
