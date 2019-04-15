@@ -2,6 +2,11 @@ import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import AddTodo from "./containers/AddTodo";
 
+state = {
+  todos: [],
+  visibilityFilter: "SHOW_ALL_Todos"
+};
+
 export default class TodoApp extends React.Component {
   render() {
     return (

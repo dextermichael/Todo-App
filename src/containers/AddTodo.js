@@ -7,12 +7,24 @@ import {
   TouchableOpacity
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { connect } from "react-redux";
 
-export default class AddTodo extends React.Component {
+class AddTodo extends React.Component {
+  state = {
+    text: ""
+  };
+
+  addTodo = text => {
+    //redux store
+    this.props.dispatch({ type: "ADD_TODO", text });
+    this.setState({ text: "" });
+  };
   render() {
     return (
       <View style={{ flexDirection: "row", marginHorizontal: 20 }}>
         <TextInput
+          onChangeText={text => this.setState({ text })}
+          value={this.state}
           placeholder="Ex.Create New Video"
           style={{
             borderWidth: 1,
@@ -23,7 +35,7 @@ export default class AddTodo extends React.Component {
             padding: 5
           }}
         />
-        <TouchableOpacity onPress={() => alert("added too")}>
+        <TouchableOpacity onPress={() => this.addTodo(this.state.text)}>
           <View
             style={{
               height: 50,
@@ -43,6 +55,8 @@ export default class AddTodo extends React.Component {
     );
   }
 }
+
+export default connect()(AddTodo);
 
 const styles = StyleSheet.create({
   container: {
