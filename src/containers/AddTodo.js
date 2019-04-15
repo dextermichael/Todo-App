@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import AddTodo from "./containers/AddTodo";
 
-export default class TodoApp extends React.Component {
+export default class AddTodo extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <AddTodo />
+        <Text>AddTodo</Text>
       </View>
     );
   }
