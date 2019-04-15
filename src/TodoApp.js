@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import AddTodo from "./containers/AddTodo";
+import VisibleTodos from "./containers/VisibleTodos";
 
 state = {
   todos: [],
@@ -12,6 +13,9 @@ export default class TodoApp extends React.Component {
     return (
       <View style={styles.container}>
         <AddTodo />
+        <View>
+          <VisibleTodos />
+        </View>
       </View>
     );
   }

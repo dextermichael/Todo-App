@@ -19,3 +19,7 @@ const todos = (state = [], action) => {
 
   return state;
 };
+
+//reducer takes our intial state does something based on action then returns state
+
+export default todos;
